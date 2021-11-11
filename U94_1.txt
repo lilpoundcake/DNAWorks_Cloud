@@ -1,0 +1,330 @@
+--------------------------------------------------------------------------------
+|               HPC @ NIH -- Center for Information Technology                 |
+|                             https://hpc.nih.gov                              |
+|   National Institutes of Health, Department of Health and Human Services     |
+|                                                                              |
+|         DNAWorks Web Site: https://hpcwebapps.cit.nih.gov/dnaworks           |
+--------------------------------------------------------------------------------
+|                                                                              |
+|               Send all correspondence to webtools@hpc.nih.gov                |
+--------------------------------------------------------------------------------
+
+ Job started on 11/11/2021 at 03:33:42
+ 
+      SEQUENCE  1: PROTEIN LENGTH =  160                               
+ ----------------------------------------------------------------
+   1 MFSIINPSDDFWTKDKYIMLTIKGPMEWEAEIPGISTDFFCKFSNVSVPHFRDMHSPGAP
+  61 DIKWITACTKMIDVILNYWNNKTAVPTPAKWYAQAENKAGRPSLILLIALDGIPSATIGK
+ 121 HTTEIRGVLIKDFFDGNAPKIDDWCTYAKTKKNGGGTQVF
+ ----------------------------------------------------------------
+ 
+             CODON FREQUENCY TABLE: USER INPUT                    
+ ----------------------------------------------------------------
+ 
+      TTT F 0.471   TCT S 0.216   TAT Y 0.445   TGT C 0.468
+      TTC F 0.529   TCC S 0.223   TAC Y 0.555   TGC C 0.532
+      TTA L 0.065   TCA S 0.139   TAA X 0.263   TGA X 0.500
+      TTG L 0.143   TCG S 0.047   TAG X 0.237   TGG W 1.000
+ 
+      CTT L 0.134   CCT P 0.312   CAT H 0.441   CGT R 0.107
+      CTC L 0.186   CCC P 0.317   CAC H 0.559   CGC R 0.177
+      CTA L 0.078   CCA P 0.291   CAA Q 0.237   CGA R 0.136
+      CTG L 0.394   CCG P 0.080   CAG Q 0.763   CGG R 0.193
+ 
+      ATT I 0.355   ACT T 0.259   AAT N 0.451   AGT S 0.155
+      ATC I 0.505   ACC T 0.372   AAC N 0.549   AGC S 0.222
+      ATA I 0.140   ACA T 0.288   AAA K 0.391   AGA R 0.193
+      ATG M 1.000   ACG T 0.082   AAG K 0.609   AGG R 0.194
+ 
+      GTT V 0.178   GCT A 0.322   GAT D 0.467   GGT G 0.202
+      GTC V 0.240   GCC A 0.372   GAC D 0.533   GGC G 0.336
+      GTA V 0.120   GCA A 0.234   GAA E 0.408   GGA G 0.249
+      GTG V 0.462   GCG A 0.072   GAG E 0.592   GGG G 0.212
+ 
+ 
+             ACTIVE CODONS FOR SEQUENCE GENERATION 
+ 
+  Residue   Codons   Active Codons     Min. Freq.    Max. Freq.
+ ----------------------------------------------------------------
+   A  Ala      4           3             0.234         0.372
+   C  Cys      2           2             0.468         0.532
+   D  Asp      2           2             0.467         0.533
+ 
+   E  Glu      2           2             0.408         0.592
+   F  Phe      2           2             0.471         0.529
+   G  Gly      4           4             0.202         0.336
+ 
+   H  His      2           2             0.441         0.559
+   I  Ile      3           2             0.355         0.505
+   K  Lys      2           2             0.391         0.609
+ 
+   L  Leu      6           2             0.186         0.394
+   M  Met      1           1             1.000         1.000
+   N  Asn      2           2             0.451         0.549
+ 
+   P  Pro      4           3             0.291         0.317
+   Q  Gln      2           2             0.237         0.763
+   R  Arg      6           2             0.193         0.194
+ 
+   S  Ser      6           3             0.216         0.223
+   T  Thr      4           3             0.259         0.372
+   V  Val      4           2             0.240         0.462
+ 
+   W  Trp      1           1             1.000         1.000
+   X  End      3           3             0.237         0.500
+   Y  Tyr      2           2             0.445         0.555
+ 
+ 
+                SEQUENCE PATTERNS TO BE SCREENED
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ 
+ ----------------------------------------------------------------
+                    PARAMETERS FOR TRIAL 1                             
+ ----------------------------------------------------------------
+               Total Size Of Gene ......... 480 nt                        
+               Protein Residues ........... 160                           
+               Mutatable Residues ......... 149                           
+               Fixed Nucleotides .......... 33 nt                         
+               Degenerate Nucleotides ..... 0 nt                          
+               Oligo Size ................. 50 nt                         
+               Annealing Temp ............. 65 +/- 1*C                    
+               Oligo Concentration ........ 2.00E-7 M                     
+               Sodium Concentration ....... 5.00E-2 M                     
+               Mg2+ Concentration ......... 2.00E-3 M                     
+               Codon Frequency Threshold .. 20%                           
+               Repeat Threshold ........... 8 nt                          
+               Mispriming Threshold ....... 8/18 (6 exact) nt             
+               Thermodynamically Balanced Inside-Out mode output
+ 
+--------------------------------------------------------------------------------
+ 
+ The DNA sequence #   1 is:
+ ----------------------------------------------------------------
+   1 ATGTTCAGCATCATCAACCCCTCCGATGACTTCTGGACCAAGGACAAGTACATCATGCTG
+  61 ACCATCAAGGGCCCCATGGAGTGGGAAGCCGAGATCCCCGGCATCTCCACCGACTTCTTC
+ 121 TGCAAGTTCTCCAACGTGTCCGTGCCCCACTTCAGGGACATGCATTCCCCTGGCGCACCC
+ 181 GACATCAAGTGGATCACCGCCTGCACCAAGATGATCGACGTGATCCTGAACTACTGGAAC
+ 241 AACAAAACCGCCGTGCCTACACCCGCCAAGTGGTACGCCCAGGCCGAGAACAAGGCCGGC
+ 301 AGGCCCTCCCTCATCCTGCTGATCGCCCTGGACGGCATCCCATCCGCCACCATCGGCAAG
+ 361 CACACCACCGAGATTCGGGGAGTGCTGATTAAGGACTTTTTTGACGGTAACGCCCCCAAA
+ 421 ATCGACGACTGGTGCACTTACGCCAAGACCAAGAAGAACGGAGGCGGTACCCAGGTGTTC
+ 481 
+ ----------------------------------------------------------------
+ 
+ The oligonucleotide assembly is:
+ ----------------------------------------------------------------
+     1       10        20        30        40        50        60
+     |        |         |         |         |         |         |
+ 
+     1 --->                              3 --->                  
+   1 ATGTTCAGCATCATCAACCCCTCCGATGAC      accaaggacaagtacatcatgctg
+              ATCATCAACCCCTCCGATGACTTCTGGACCAAGGACAAGTACATCATGCT 
+              2 --->                                             
+      M  F  S  I  I  N  P  S  D  D  F  W  T  K  D  K  Y  I  M  L 
+ 
+     |        |         |         |         |         |         |
+ 
+                                            5 --->               
+  61 accatcaagggccccatggagtggga             GGCATCTCCACCGACTTCTTC
+              ggccccatggagtgggaagccgagatccccggcatctccaccgacttctt 
+              4 --->                                             
+      T  I  K  G  P  M  E  W  E  A  E  I  P  G  I  S  T  D  F  F 
+ 
+     |        |         |         |         |         |         |
+ 
+                                                     7 --->      
+ 121 TGCAAGTTCTCCAACGTGTCCGTGCCCCA                   cctggcgcaccc
+                  ACGTGTCCGTGCCCCACTTCAGGGACATGCATTCCCCTGGCGCACCC
+                  6 --->                                         
+      C  K  F  S  N  V  S  V  P  H  F  R  D  M  H  S  P  G  A  P 
+ 
+     |        |         |         |         |         |         |
+ 
+                                                                 
+ 181 gacatcaagtggatcaccgcctgcaccaagatgatcga     AGGACTTGATGACCTTG
+     GAC               gcctgcaccaagatgatcgacgtgatcctgaactactggaac
+                       8 --->                                    
+      D  I  K  W  I  T  A  C  T  K  M  I  D  V  I  L  N  Y  W  N 
+ 
+     |        |         |         |         |         |         |
+ 
+                               <---  9                           
+ 241 TTGTTTTGGCGGCACGGATGTGGGCGGTTCACC                 gttccggccg
+     aacaaaac       GGATGTGGGCGGTTCACCATGCGGGTCCGGCTCTTGTTCCGGCCG
+                                                               <-
+      N  K  T  A  V  P  T  P  A  K  W  Y  A  Q  A  E  N  K  A  G 
+ 
+     |        |         |         |         |         |         |
+ 
+                                      <--- 11                    
+ 301 tccgggagggagtaggacgactagcgggacctgccgtagg               CGTTC
+     TCCGG                   cgggacctgccgtagggtaggcggtggtagccgttc
+     -- 10                                                       
+      R  P  S  L  I  L  L  I  A  L  D  G  I  P  S  A  T  I  G  K 
+ 
+     |        |         |         |         |         |         |
+ 
+                                           <--- 13               
+ 361 GTGTGGTGGCTCTAAGCCCCTCACGACTAATTCCTGAAAAAACTG      cgggggttt
+     gtgtggtggctcta      TCACGACTAATTCCTGAAAAAACTGCCATTGCGGGGGTTT
+            <--- 12                                              
+      H  T  T  E  I  R  G  V  L  I  K  D  F  F  D  G  N  A  P  K 
+ 
+     |        |         |         |         |         |         |
+ 
+                                       <--- 15                   
+ 421 tagctgctgaccacgtgaatgcggttctggttcttcttgcc                   
+     TAGCTGCTGA           cggttctggttcttcttgcctccgccatgggtccacaag
+        <--- 14                                           <--- 16
+      I  D  D  W  C  T  Y  A  K  T  K  K  N  G  G  G  T  Q  V  F 
+ 
+     |        |         |         |         |         |         |
+ 
+     
+ 481 
+     
+     
+     
+ ----------------------------------------------------------------
+ 
+ The total codon usage score ...........     0.000
+ The total length score ................     0.000
+ The total melting temperature score ...     0.000
+ The total repeat score ................     0.000
+ The total pattern score ...............     0.000
+ The total mispriming score ............     0.000
+ The total AT content score ............     0.000
+ The total GC content score ............     0.000
+ The total fixed gap score .............      N/A
+                The OVERALL score ......     0.000
+ 
+ 
+                  DETAILED CODON FREQUENCY REPORT 
+  [ Codon, AA, Frequency, # of times used in coding sequence ] 
+ ----------------------------------------------------------------
+ 
+ TTT F 0.47   2  TCT S 0.22   0  TAT Y 0.44   0  TGT C 0.47   0
+ TTC F 0.53   7  TCC S 0.22   7  TAC Y 0.56   4  TGC C 0.53   3
+ TTA L 0.06   0  TCA S 0.14   0  TAA X 0.26   0  TGA X 0.50   0
+ TTG L 0.14   0  TCG S 0.05   0  TAG X 0.24   0  TGG W 1.00   6
+ 
+ CTT L 0.13   0  CCT P 0.31   2  CAT H 0.44   1  CGT R 0.11   0
+ CTC L 0.19   1  CCC P 0.32   8  CAC H 0.56   2  CGC R 0.18   0
+ CTA L 0.08   0  CCA P 0.29   1  CAA Q 0.24   0  CGA R 0.14   0
+ CTG L 0.39   6  CCG P 0.08   0  CAG Q 0.76   2  CGG R 0.19   1
+ 
+ ATT I 0.35   2  ACT T 0.26   1  AAT N 0.45   0  AGT S 0.15   0
+ ATC I 0.51  15  ACC T 0.37  11  AAC N 0.55   8  AGC S 0.22   1
+ ATA I 0.14   0  ACA T 0.29   1  AAA K 0.39   2  AGA R 0.19   0
+ ATG M 1.00   5  ACG T 0.08   0  AAG K 0.61  13  AGG R 0.19   2
+ 
+ GTT V 0.18   0  GCT A 0.32   0  GAT D 0.47   1  GGT G 0.20   2
+ GTC V 0.24   0  GCC A 0.37  11  GAC D 0.53  11  GGC G 0.34   7
+ GTA V 0.12   0  GCA A 0.23   1  GAA E 0.41   1  GGA G 0.25   2
+ GTG V 0.46   6  GCG A 0.07   0  GAG E 0.59   4  GGG G 0.21   0
+ 
+             
+              Frequency Range   Number of Codons
+             -------------------------------------
+                0% -  4%                  0
+                5% -  9%                  0
+               10% - 14%                  0
+               15% - 19%                  4
+               20% - 24%                 13
+               25% - 29%                  3
+               30% - 34%                 17
+               35% - 39%                 32
+               40% - 44%                  2
+               45% - 49%                  9
+                  >= 50%                 80
+             -------------------------------------
+              Total Codons Used =   160
+ 
+                  Tm Range    # of Overlaps 
+             -------------------------------------
+                   <63            0
+                    63            0
+                    64            6
+                    65            9
+                    66            0
+                    67            0
+                    68            0
+                    69            0
+                    70            0
+                  >=71            0
+             -------------------------------------
+              Tm Range =  1.9
+ 
+              Ovrlap Len Range  # of Oligos
+             -------------------------------------
+                   <16            2
+                    16            2
+                    17            1
+                    18            1
+                    19            2
+                    20            3
+                    21            1
+                    22            0
+                    23            1
+                    24            0
+                    25            2
+                  >=26            0
+             -------------------------------------
+              Lowest Overlap = 15
+ 
+              Length Range   # of Oligos
+             -------------------------------------
+                   < 40            2
+                   40- 41           0
+                   42- 43           0
+                   44- 45           0
+                   46- 47           0
+                   48- 49           0
+                   50- 51          14
+                   52- 53           0
+                   54- 55           0
+                   56- 57           0
+                   58- 59           0
+                   >= 60           0
+             -------------------------------------
+              Longest =  50
+ 
+ 
+          Sequence Patterns Screened (As Supplied By User)
+ ----------------------------------------------------------------
+                       None found
+ ----------------------------------------------------------------
+ 
+        16 oligonucleotides need to be synthesized
+ ----------------------------------------------------------------
+  1 ATGTTCAGCATCATCAACCCCTCCGATGAC  30
+  2 ATCATCAACCCCTCCGATGACTTCTGGACCAAGGACAAGTACATCATGCT  50
+  3 ACCAAGGACAAGTACATCATGCTGACCATCAAGGGCCCCATGGAGTGGGA  50
+  4 GGCCCCATGGAGTGGGAAGCCGAGATCCCCGGCATCTCCACCGACTTCTT  50
+  5 GGCATCTCCACCGACTTCTTCTGCAAGTTCTCCAACGTGTCCGTGCCCCA  50
+  6 ACGTGTCCGTGCCCCACTTCAGGGACATGCATTCCCCTGGCGCACCCGAC  50
+  7 CCTGGCGCACCCGACATCAAGTGGATCACCGCCTGCACCAAGATGATCGA  50
+  8 GCCTGCACCAAGATGATCGACGTGATCCTGAACTACTGGAACAACAAAAC  50
+  9 CCACTTGGCGGGTGTAGGCACGGCGGTTTTGTTGTTCCAGTAGTTCAGGA  50
+ 10 GGCCTGCCGGCCTTGTTCTCGGCCTGGGCGTACCACTTGGCGGGTGTAGG  50
+ 11 GGATGCCGTCCAGGGCGATCAGCAGGATGAGGGAGGGCCTGCCGGCCTTG  50
+ 12 ATCTCGGTGGTGTGCTTGCCGATGGTGGCGGATGGGATGCCGTCCAGGGC  50
+ 13 GTCAAAAAAGTCCTTAATCAGCACTCCCCGAATCTCGGTGGTGTGCTTGC  50
+ 14 AGTCGTCGATTTTGGGGGCGTTACCGTCAAAAAAGTCCTTAATCAGCACT  50
+ 15 CCGTTCTTCTTGGTCTTGGCGTAAGTGCACCAGTCGTCGATTTTGGGGGC  50
+ 16 GAACACCTGGGTACCGCCTCCGTTCTTCTTGGTCTTGGC  39
+ 
+                          FINAL SUMMARY FOR   1 SOLUTION   
+--------------------------------------------------------------------------------
+  #    Tm   Len  |    Score   TmRange  Short    Long   #Olig  #Repeat #Misprime
+ 
+  1    65    50  |    0.000       1.9      15      50      16       0       0
+ 
+--------------------------------------------------------------------------------
+|               HPC @ NIH -- Center for Information Technology                 |
+|                             https://hpc.nih.gov                              |
+|   National Institutes of Health, Department of Health and Human Services     |
+|                                                                              |
+|         DNAWorks Web Site: https://hpcwebapps.cit.nih.gov/dnaworks           |
+--------------------------------------------------------------------------------
