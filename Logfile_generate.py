@@ -10,7 +10,7 @@ log_title += ("melting low " + react_temp + "\n")
 primer_length = input("Введите желаемую длину праймеров\n")
 log_title += ("lenght low " + primer_lenght+ "\n")
 
-codon_freq = input("Введите пороговое значение частоты встречаемости кодоновn\")
+codon_freq = input("Введите пороговое значение частоты встречаемости кодонов\n")
 log_title += ("frequency threshold " + codon_freq + "\n")
                    
 sys_expr = input("Укажите систему экспрессии:\n1 - E.coli\n2 - CHO\n3 - Human\n4 - Sf9\n")
