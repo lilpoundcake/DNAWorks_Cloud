@@ -7,7 +7,7 @@ project_name = input("Введите название проекта\n")
 react_temp = input("Введите температуру проведения реакции\n")
 log_title += ("melting low " + react_temp + "\n")
 
-primer_length = input("Введите желаемую длину праймеров\n")
+primer_lenght = input("Введите желаемую длину праймеров\n")
 log_title += ("lenght low " + primer_lenght+ "\n")
 
 codon_freq = input("Введите пороговое значение частоты встречаемости кодонов\n")
