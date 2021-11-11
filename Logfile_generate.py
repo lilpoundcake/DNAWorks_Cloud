@@ -59,7 +59,7 @@ elif len(seq_prot) >= 166 and seq_nt == 0:
   fragment_len = round(seq_prot/fragment_num)
   for i in range(fragment_num):
     if i == fragment_num-1:
-      fragment_list.append(seq_prot[(seq_len-fragment_len*i)):len(seq_prot)])
+      fragment_list.append(seq_prot[(seq_len-fragment_len*i):len(seq_prot)])
     else:
       fragment_list.append(seq_prot[fragment_len*i:fragment_len*(i+1)])
 else:
