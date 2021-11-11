@@ -2,7 +2,7 @@
 
 log_title = ""
 
-project_name = input("Введите название проекта\n") """Название проекта и имя входных файлов"""
+project_name = input("Введите название проекта\n")
 
 react_temp = input("Введите температуру проведения реакции\n")
 log_title += ("melting low " + react_temp + "\n")
@@ -17,7 +17,7 @@ sys_expr = input("Укажите систему экспрессии:\n
                   1 - E.coli\n
                   2 - CHO\n
                   3 - Human\n
-                  4 - Sf9\n") """Нужно дополнительно прописать кодоны CHO и Sf9"""
+                  4 - Sf9\n")
 if sys_expr == 1:
   log_title += ("codon E.coli\n")
 elif sys_expr == 3:
