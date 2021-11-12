@@ -65,7 +65,9 @@ elif seq_len >= 166 and seq_nt == "":
 else:
   fragment_num = 1
   fragment_list.append(seq_prot)
-                   
+
+print(fragment_list)
+  
 for i in len(fragment_list):
   output_i = open(project_name + "_" + str(i+1) + ".txt", "w")
   if seq_prot == "":
