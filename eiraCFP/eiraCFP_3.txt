@@ -1,0 +1,197 @@
+--------------------------------------------------------------------------------
+|               HPC @ NIH -- Center for Information Technology                 |
+|                             https://hpc.nih.gov                              |
+|   National Institutes of Health, Department of Health and Human Services     |
+|                                                                              |
+|         DNAWorks Web Site: https://hpcwebapps.cit.nih.gov/dnaworks           |
+--------------------------------------------------------------------------------
+|                                                                              |
+|               Send all correspondence to webtools@hpc.nih.gov                |
+--------------------------------------------------------------------------------
+
+ Job started on 11/12/2021 at 08:56:44
+ 
+      SEQUENCE  1: DNA     LENGTH =  234                               
+ ----------------------------------------------------------------
+   1 AATGGCATCCGCGTTGAGTTCAACCAGGCGTACGATATTGAAGGTGTGACCGAAAAACTG
+  61 GTTACCAAATGCAGCCAAATGAATCGTCCGTTGGCGGGCTCCGCGGCAGTGCATATCCCG
+ 121 CGTTATCATCACCTGAGCAAACACACCAAACTGAGCAAAGACCGCGACGAGCGCCGTGAT
+ 181 CACATGTGTCTGGTAGAGGTCGTGAAAGCGGTTGATCTGGACACGTATCAGTGA
+ ----------------------------------------------------------------
+ 
+                SEQUENCE PATTERNS TO BE SCREENED
+ ----------------------------------------------------------------
+ ----------------------------------------------------------------
+ 
+ ----------------------------------------------------------------
+                    PARAMETERS FOR TRIAL 1                             
+ ----------------------------------------------------------------
+               Total Size Of Gene ......... 234 nt                        
+               Protein Residues ........... 0                             
+               Mutatable Residues ......... 0                             
+               Fixed Nucleotides .......... 234 nt                        
+               Degenerate Nucleotides ..... 0 nt                          
+               Oligo Size ................. 50 nt                         
+               Annealing Temp ............. 65 +/- 1*C                    
+               Oligo Concentration ........ 2.00E-7 M                     
+               Sodium Concentration ....... 5.00E-2 M                     
+               Mg2+ Concentration ......... 2.00E-3 M                     
+               Codon Frequency Threshold .. 20%                           
+               Repeat Threshold ........... 8 nt                          
+               Mispriming Threshold ....... 8/18 (6 exact) nt             
+               AT Score Weight ............ 0.00E+0                       
+               Codon Score Weight ......... 0.00E+0                       
+               GC Score Weight ............ 0.00E+0                       
+               Pattern Score Weight ....... 0.00E+0                       
+               Repeat Score Weight ........ 0.00E+0                       
+ 
+--------------------------------------------------------------------------------
+ 
+ The DNA sequence #   1 is:
+ ----------------------------------------------------------------
+   1 AATGGCATCCGCGTTGAGTTCAACCAGGCGTACGATATTGAAGGTGTGACCGAAAAACTG
+  61 GTTACCAAATGCAGCCAAATGAATCGTCCGTTGGCGGGCTCCGCGGCAGTGCATATCCCG
+ 121 CGTTATCATCACCTGAGCAAACACACCAAACTGAGCAAAGACCGCGACGAGCGCCGTGAT
+ 181 CACATGTGTCTGGTAGAGGTCGTGAAAGCGGTTGATCTGGACACGTATCAGTGA
+ ----------------------------------------------------------------
+ 
+ The oligonucleotide assembly is:
+ ----------------------------------------------------------------
+     1       10        20        30        40        50        60
+     |        |         |         |         |         |         |
+ 
+     1 --->                                           3 --->     
+   1 AATGGCATCCGCGTTGAGTTCAACCAGGCGTACGATATTGAAGG     ccgaaaaactg
+                           TGGTCCGCATGCTATAACTTCCACACTGGCTTTTTGAC
+                                                                 
+                                                                 
+ 
+     |        |         |         |         |         |         |
+ 
+                                                          5 ---> 
+  61 gttaccaaatgcagccaaatgaatcgtccgttggcgggc              TATCCCG
+     CAATGGTTTACG            gcaggcaaccgcccgaggcgccgtcacgtatagggc
+          <---  2                                                
+                                                                 
+ 
+     |        |         |         |         |         |         |
+ 
+                                                         7 --->  
+ 121 CGTTATCATCACCTGAGCAAACACACCAAACTGAGCAAAGACC         gccgtgat
+                 *********         *********                ***** < repeat
+     gcaatagtagtgga        TGTGGTTTGACTCGTTTCTGGCGCTGCTCGCGGCACTA
+            <---  4                                              
+                                                                 
+ 
+     |        |         |         |         |         |         |
+ 
+                                                           
+ 181 cacatgtgtctggtagaggtcgtgaaagcggttgatctggac            
+     ********                                               < repeat
+     GTGTACACAGAC         cactttcgccaactagacctgtgcatagtcact
+          <---  6                                   <---  8
+                                                           
+ ----------------------------------------------------------------
+ 
+ The total codon usage score ...........     0.000
+ The total length score ................     0.000
+ The total melting temperature score ...     0.000
+ The total repeat score ................     4.274
+ The total pattern score ...............     0.000
+ The total mispriming score ............     0.000
+ The total AT content score ............     0.000
+ The total GC content score ............     0.000
+ The total fixed gap score .............      N/A
+                The OVERALL score ......     4.274
+ 
+ 
+                  Tm Range    # of Overlaps 
+             -------------------------------------
+                   <62            0
+                    62            0
+                    63            0
+                    64            6
+                    65            1
+                    66            0
+                    67            0
+                    68            0
+                    69            0
+                  >=70            0
+             -------------------------------------
+              Tm Range =  1.6
+ 
+              Ovrlap Len Range  # of Oligos
+             -------------------------------------
+                   <17            1
+                    17            0
+                    18            0
+                    19            0
+                    20            1
+                    21            3
+                    22            1
+                    23            1
+                    24            0
+                    25            0
+                    26            0
+                  >=27            0
+             -------------------------------------
+              Lowest Overlap = 15
+ 
+              Length Range   # of Oligos
+             -------------------------------------
+                   < 39            1
+                   39- 40           0
+                   41- 42           0
+                   43- 44           1
+                   45- 46           0
+                   47- 48           0
+                   49- 50           6
+                   51- 52           0
+                   53- 54           0
+                   55- 56           0
+                   57- 58           0
+                   >= 59           0
+             -------------------------------------
+              Longest =  50
+ 
+  There are   3 repeats greater than  8 nt:
+ ----------------------------------------------------------------
+ DR Pos1 =  133   Pos2 =  151   Size =  9   Seq1 = CTGAGCAAA
+                                            Seq2 = CTGAGCAAA
+ PR Pos1 =  176   Pos2 =  176   Size =  8   Seq1 = GTGATCAC
+                                            Seq2 = GTGATCAC
+ PR Pos1 =  181   Pos2 =  181   Size =  8   Seq1 = CACATGTG
+                                            Seq2 = CACATGTG
+ ----------------------------------------------------------------
+ 
+ 
+          Sequence Patterns Screened (As Supplied By User)
+ ----------------------------------------------------------------
+                       None found
+ ----------------------------------------------------------------
+ 
+         8 oligonucleotides need to be synthesized
+ ----------------------------------------------------------------
+  1 AATGGCATCCGCGTTGAGTTCAACCAGGCGTACGATATTGAAGG  44
+  2 GCATTTGGTAACCAGTTTTTCGGTCACACCTTCAATATCGTACGCCTGGT  50
+  3 CCGAAAAACTGGTTACCAAATGCAGCCAAATGAATCGTCCGTTGGCGGGC  50
+  4 AGGTGATGATAACGCGGGATATGCACTGCCGCGGAGCCCGCCAACGGACG  50
+  5 TATCCCGCGTTATCATCACCTGAGCAAACACACCAAACTGAGCAAAGACC  50
+  6 CAGACACATGTGATCACGGCGCTCGTCGCGGTCTTTGCTCAGTTTGGTGT  50
+  7 GCCGTGATCACATGTGTCTGGTAGAGGTCGTGAAAGCGGTTGATCTGGAC  50
+  8 TCACTGATACGTGTCCAGATCAACCGCTTTCAC  33
+ 
+                          FINAL SUMMARY FOR   1 SOLUTION   
+--------------------------------------------------------------------------------
+  #    Tm   Len  |    Score   TmRange  Short    Long   #Olig  #Repeat #Misprime
+ 
+  1    65    50  |    4.274       1.6      15      50       8       3       0
+ 
+--------------------------------------------------------------------------------
+|               HPC @ NIH -- Center for Information Technology                 |
+|                             https://hpc.nih.gov                              |
+|   National Institutes of Health, Department of Health and Human Services     |
+|                                                                              |
+|         DNAWorks Web Site: https://hpcwebapps.cit.nih.gov/dnaworks           |
+--------------------------------------------------------------------------------
+
