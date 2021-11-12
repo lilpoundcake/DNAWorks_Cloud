@@ -97,7 +97,7 @@ bash_script.write("mkdir " + project_name + "\n" )
 for i in range(fragment_num):
   bash_script.write("cp " + project_name + "_" + str(i+1) + ".inp " + str(project_name) + "\n")
 
-#bash_script.write("cp " + project_name + ".txt " + str(project_name) + "\n")
+bash_script.write("cp " + project_name + ".txt " + str(project_name) + "\n")
 bash_script.write("cp " + project_name + "_hairpin.csv " + str(project_name) + "\n")
 bash_script.write("cp " + project_name + "_high_temp.csv " + str(project_name) + "\n")
 bash_script.write("rm -f " + project_name + "*\n")
