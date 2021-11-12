@@ -15,8 +15,7 @@ log_title += ("length low " + primer_lenght + "\n")
 codon_freq = input("Введите пороговое значение частоты встречаемости кодонов\n")
 log_title += ("frequency threshold " + codon_freq + "\n")
                    
-sys_expr = input("Укажите систему экспрессии:\n1 - E.coli\n2 - CHO\n3 - Human\n4 - Sf9\n")
-log_title += ("codon ")
+sys_expr = int(input("Укажите систему экспрессии:\n1 - E.coli\n2 - CHO\n3 - Human\n4 - Sf9\n"))
 if sys_expr == 1:
   log_title += ("codon E.coli\n")
 elif sys_expr == 3:
@@ -25,10 +24,12 @@ elif sys_expr == 2:
   CHO = open("CHO.txt", "r")
   for i in CHO:
     log_title += (i + "\n")
-else:
+  CHO.close()
+elif sys_expr == 4:
   Sf9 = open("Sf9.txt", "r")
   for i in Sf9:
     log_title += (i + "\n")
+  Sf9.close()
 
 print(log_title)
                   
