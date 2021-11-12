@@ -32,18 +32,18 @@ print(log_title)
                   
 if input("Последовательность аминокислотная или нуклеотидная?\n1 - аминокислотная\n2 - нуклеотидная\n") == "1":
   seq_prot = input("Введите последовательность белка\n")
-  seq_nt = 0
+  seq_nt = ""
 else:
   seq_nt = input("Введите нуклеотидную последовательность\n")
-  seq_prot = 0
+  seq_prot = ""
 
 fragment_list = []
-if seq_prot == 0:
+if seq_prot == "":
   seq_len = len(seq_nt)
 else:
   seq_len = len(seq_prot)                 
                    
-if len(seq_len) >= 500 and seq_prot == 0:
+if len(seq_len) >= 500 and seq_prot == "":
   fragment_num = round(len(seq_nt)/350)
   fragment_len = round(seq_nt/fragment_num)
   for i in range(fragment_num):
@@ -54,7 +54,7 @@ if len(seq_len) >= 500 and seq_prot == 0:
 elif len(seq_len) < 500:
   fragment_num = 1
   fragment_list.append(seq_nt)
-elif len(seq_len) >= 166 and seq_nt == 0:
+elif len(seq_len) >= 166 and seq_nt == "":
   fragment_num = round(len(seq_prot)/166)
   fragment_len = round(seq_prot/fragment_num)
   for i in range(fragment_num):
