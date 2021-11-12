@@ -108,12 +108,7 @@ for i in GC_content.index:
 
 print('Hairpins \n', df1[df1.Hairpin > react_temp].loc[:, ['Hairpin', 'Seq']], '\n', df3)
 
-high_hairpin = open((project_name + "_hairpin.txt"), "w")
-high_hairpin.write(df1[df1.Hairpin > react_temp].loc[:, ['Hairpin', 'Seq']])
-high_hairpin.close()
-
-high_temp = open((project_name + '_high_temp.txt'), "w")
-high_temp.write(df3)
-high_temp.close()
+high_hairpin.to_csv(df1[df1.Hairpin > react_temp].loc[:, ['Hairpin', 'Seq']])
+high_temp.to_csv(df3)
 
 primers_files.close()
