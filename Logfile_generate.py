@@ -28,6 +28,8 @@ else:
   for i in Sf9:
     log_title += (i + "\n")
 
+CHO.close()
+
 print(log_title)
                   
 if input("Последовательность аминокислотная или нуклеотидная?\n1 - аминокислотная\n2 - нуклеотидная") == 2:
@@ -66,23 +68,29 @@ else:
   fragment_num = 1
   fragment_list.append(seq_prot)
                    
-#for i in range(fragm_num):
+for i in fragment_list:
+  output_i = open(project_name + "_" + i + ".txt", "w")
+  output_i.write(log_title + "\nnucleotide\n" + i + "//")
+  output_i.close()  
+                   
+data_log = open("data_log.txt", "w")
+data_log.write("project_name " + project_name + "\nreact_temp " + react_temp + "\nfragment_num" + fragment_num)
+data_log.close()
+
+bash_script = open("bash_next.sh", "w")
+
+for i in range(fragment_num):
+  bash_script.write("dnaworks " + project_name + "_" + i + ".inp\n")
   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
+bash_script.write("python3 Primer_Alg.py\n")
+bash_script("mkdir " + project_name + "\n" )
+
+for i in range(fragment_num):
+  bash_script("cp " + project_name + "_" + i + ".inp\n" + "rm -rf " + project_name + "_" + i + ".inp\n")
+bash_script("cp " + project_name + ".txt\n" +  "rm -rf " + project_name + ".txt\n")
+bash_script.close()
+
+
+
+
+
