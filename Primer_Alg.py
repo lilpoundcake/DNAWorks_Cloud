@@ -52,7 +52,6 @@ list_primer.close()
 primers.close()
 project_seq.close()
 
-#primers_files = open(str(input('Введите имя файла с праймерами ')) + '.fasta', 'r')
 primers_files = open(project_name + '_SG_primers.fasta', 'r')
 primers = dict()
 for i in primers_files:
@@ -64,14 +63,9 @@ react_temp = int(data_log.readline().split()[1])
 
 for i in df1.index:
     df1.loc[i, 'Seq'] = primers[i].upper()
-    df1.loc[i, 'Tm'] = primer3.calcTm(primers[i], mv_conc=25.0, dv_conc=1.5, 
-                                      dntp_conc=0.8, dna_conc=0.04)
-    df1.loc[i, 'Hairpin'] = primer3.calcHairpinTm(primers[i], mv_conc=25.0, 
-                                                  dv_conc=1.5, dntp_conc=0.8, 
-                                                  dna_conc=0.04,temp_c=25)
-    df1.loc[i, 'Homodimer'] = primer3.calcHomodimerTm(primers[i], mv_conc=25.0, 
-                                                      dv_conc=1.5, dntp_conc=0.8, 
-                                                      dna_conc=0.04, temp_c=25)
+    df1.loc[i, 'Tm'] = primer3.calcTm(primers[i], mv_conc=25.0, dv_conc=1.5, dntp_conc=0.8, dna_conc=0.04)
+    df1.loc[i, 'Hairpin'] = primer3.calcHairpinTm(primers[i], mv_conc=25.0, dv_conc=1.5, dntp_conc=0.8, dna_conc=0.04,temp_c=25)
+    df1.loc[i, 'Homodimer'] = primer3.calcHomodimerTm(primers[i], mv_conc=25.0, dv_conc=1.5, dntp_conc=0.8, dna_conc=0.04, temp_c=25)
     df1.loc[i, 'GC content'] = int(100 * (primers[i].count('G') + primers[i].count('C')) / len(primers[i]))
     df1.loc[i, 'React_temp'] = react_temp
     
@@ -83,14 +77,8 @@ for i in df1.index:
         if df2.loc[i, j] == df2.loc[j, i] and df2.loc[i, j] != 'NaN':
             continue
         else:
-            df2.loc[i, j] = primer3.calcHeterodimerTm(primers[i], primers[j], 
-                                                      mv_conc=25.0, dv_conc=1.5, 
-                                                      dntp_conc=0.8, dna_conc=0.04, 
-                                                      temp_c=25)
+            df2.loc[i, j] = primer3.calcHeterodimerTm(primers[i], primers[j], mv_conc=25.0, dv_conc=1.5, dntp_conc=0.8, dna_conc=0.04, temp_c=25)
             df2.loc[j, i] = df2.loc[i, j]
-    
-#primer_plot = df1.loc[:, ['Tm', 'Homodimer', 'React_temp']]
-#primer_plot.plot()
 
 hetero_Tm = dict()
 n = 0
@@ -108,12 +96,6 @@ GC_30 = dict()
 for i in range(len(sequence) - 30):
     GC_30[i] = int(100 * (sequence[i: i+30].count('G') + sequence[i: i+30].count('C')) / len(sequence[i: i+30]))
 
-#primer1_plot = df1.loc[:, ['Tm', 'Hairpin', 'React_temp']]
-#primer1_plot.plot()
-
-#hairpin_plot = df1[df1.Hairpin > react_temp].loc[:, ['Tm', 'Hairpin']]
-#hairpin_plot.plot()
-
 GC_content = pd.DataFrame(GC_30, index=['GC_content'])
 GC_content = GC_content.transpose()
 
@@ -124,19 +106,13 @@ for i in GC_content.index:
     GC_content.loc[i, 'Min'] = 0
     GC_content.loc[i, 'Mean'] = mean_GC
 
-#GC_plot = GC_content.loc[:, ['GC_content', 'Min', 'Max', 'Mean']]
-#GC_plot.plot()
-
-#df1.to_excel(project_name + '_homodimers.xls')
-#df2.to_excel(project_name + '_heterodimers.xls')
-#df3.to_excel(project_name + '_high_temp.xls')
 print('Hairpins \n', df1[df1.Hairpin > react_temp].loc[:, ['Hairpin', 'Seq']], '\n', df3)
 
 high_hairpin = open((project_name + "_hairpin.txt"), "w")
 high_hairpin.write(df1[df1.Hairpin > react_temp].loc[:, ['Hairpin', 'Seq']])
 high_hairpin.close()
 
-high_temp = open((project_name + '_high_temp.xls'), "w")
+high_temp = open((project_name + '_high_temp.txt'), "w")
 high_temp.write(df3)
 high_temp.close()
 
