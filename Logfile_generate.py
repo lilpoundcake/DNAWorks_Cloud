@@ -72,20 +72,20 @@ for i in fragment_list:
   output_i.close()  
                    
 data_log = open("data_log.txt", "w")
-data_log.write("project_name " + project_name + "\nfragment_num" + fragment_num + "\nreact_temp " + react_temp)
+data_log.write("project_name " + project_name + "\nfragment_num" + str(fragment_num) + "\nreact_temp " + str(react_temp))
 data_log.close()
 
 bash_script = open("bash_next.sh", "w")
 bash_script.write("#!/bin/bash\n")
 
 for i in range(fragment_num):
-  bash_script.write("dnaworks " + project_name + "_" + i + ".inp\n")
+  bash_script.write("dnaworks " + project_name + "_" + str(i) + ".inp\n")
   
 bash_script.write("python3 Primer_Alg.py\n")
 bash_script("mkdir " + project_name + "\n" )
 
 for i in range(fragment_num):
-  bash_script("cp " + project_name + "_" + i + ".inp\n" + "rm -rf " + project_name + "_" + i + ".inp\n")
+  bash_script("cp " + project_name + "_" + str(i) + ".inp\n" + "rm -rf " + project_name + "_" + str(i) + ".inp\n")
 
 bash_script("cp " + project_name + ".txt\n" +  "rm -rf " + project_name + ".txt\n")
 bash_script("cp " + project_name + "_hairpin.txt\n" +  "rm -rf " + project_name + "_hairpin.txt\n")
