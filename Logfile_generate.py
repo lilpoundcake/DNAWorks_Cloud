@@ -31,7 +31,7 @@ elif sys_expr == 4:
     log_title += (i + "\n")
   Sf9.close()
 
-print(log_title)
+#print(log_title)
                   
 if int(input("Последовательность аминокислотная или нуклеотидная?\n1 - аминокислотная\n2 - нуклеотидная\n")) == 1:
   seq_prot = input("Введите последовательность белка\n")
