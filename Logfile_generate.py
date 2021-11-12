@@ -49,21 +49,21 @@ print("seq_len ", seq_len, "\n", "seq_nt ", seq_nt, "\n", "seq_prot", seq_prot, 
   
 if seq_len >= 500 and seq_prot == "":
   fragment_num = math.ceil(len(seq_nt)/350)
-  fragment_len = round(seq_len/fragment_num)
+  fragment_len = math.ceil(seq_len/fragment_num)
   for i in range(fragment_num):
     if i == int(fragment_num-1):
-      fragment_list.append(seq_nt[(seq_len-fragment_len*(i+1)):len(seq_nt)])
+      fragment_list.append(seq_nt[(seq_len-fragment_len*(i)):len(seq_nt)])
     else:
       fragment_list.append(seq_nt[(fragment_len*i):(fragment_len*(i+1))])
 elif seq_len < 500 and seq_prot == "":
   fragment_num = 1
   fragment_list.append(seq_nt)
 elif seq_len >= 166 and seq_nt == "":
-  fragment_num = math.ceil(len(seq_prot)/166)
-  fragment_len = round(seq_len/fragment_num)
+  fragment_num = int(math.ceil(len(seq_prot)/166))
+  fragment_len = math.ceil(seq_len/fragment_num)
   for i in range(fragment_num):
     if i == int(fragment_num-1):
-      fragment_list.append(seq_prot[(seq_len-fragment_len*(i+1)):len(seq_prot)])
+      fragment_list.append(seq_prot[(seq_len-fragment_len*(i)):len(seq_prot)])
     else:
       fragment_list.append(seq_prot[fragment_len*i:fragment_len*(i+1)])
 elif seq_len < 166 and seq_nt == "":
