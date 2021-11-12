@@ -86,7 +86,7 @@ bash_script = open("bash_next.sh", "w")
 bash_script.write("#!/bin/bash\n")
 
 for i in range(fragment_num):
-  bash_script.write("dnaworks " + project_name + "_" + str(i+1) + ".inp\n")
+  bash_script.write("./dnaworks " + project_name + "_" + str(i+1) + ".inp\n")
   
 bash_script.write("python3 Primer_Alg.py\n")
 bash_script.write("mkdir " + project_name + "\n" )
