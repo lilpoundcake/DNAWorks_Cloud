@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import math
+
 log_title = ""
 
 project_name = input("Введите название проекта\n")
@@ -46,7 +48,7 @@ else:
 print("seq_len ", seq_len, "\n", "seq_nt ", seq_nt, "\n", "seq_prot", seq_prot, "\n") 
   
 if seq_len >= 500 and seq_prot == "":
-  fragment_num = round(len(seq_nt)/350)
+  fragment_num = math.ceil(len(seq_nt)/350)
   fragment_len = round(seq_len/fragment_num)
   for i in range(fragment_num):
     if i == int(fragment_num-1):
@@ -57,7 +59,7 @@ elif seq_len < 500 and seq_prot == "":
   fragment_num = 1
   fragment_list.append(seq_nt)
 elif seq_len >= 166 and seq_nt == "":
-  fragment_num = round(len(seq_prot)/166)
+  fragment_num = math.ceil(len(seq_prot)/166)
   fragment_len = round(seq_len/fragment_num)
   for i in range(fragment_num):
     if i == int(fragment_num-1):
