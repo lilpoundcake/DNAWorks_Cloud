@@ -110,7 +110,7 @@ print('Hairpins \n', df1[df1.Hairpin > react_temp].loc[:, ['Hairpin', 'Seq']], '
 
 high_hairpin = df1[df1.Hairpin > react_temp].loc[:, ['Hairpin', 'Seq']]
 
-high_hairpin.to_csv()
-df3.to_csv()
+high_hairpin.to_csv(project_name + "_hairpin.csv")
+df3.to_csv(project_name + "_high_temp.csv")
 
 primers_files.close()
