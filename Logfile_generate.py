@@ -74,7 +74,7 @@ for i in fragment_list:
   output_i.close()  
                    
 data_log = open("data_log.txt", "w")
-data_log.write("project_name " + project_name + "\nreact_temp " + react_temp + "\nfragment_num" + fragment_num)
+data_log.write("project_name " + project_name + "\nfragment_num" + fragment_num + "\nreact_temp " + react_temp)
 data_log.close()
 
 bash_script = open("bash_next.sh", "w")
@@ -89,8 +89,3 @@ for i in range(fragment_num):
   bash_script("cp " + project_name + "_" + i + ".inp\n" + "rm -rf " + project_name + "_" + i + ".inp\n")
 bash_script("cp " + project_name + ".txt\n" +  "rm -rf " + project_name + ".txt\n")
 bash_script.close()
-
-
-
-
-
