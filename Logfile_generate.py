@@ -73,9 +73,9 @@ print(fragment_list)
 for i in range(len(fragment_list)):
   output_i = open(project_name + "_" + str(i+1) + ".inp", "w")
   if seq_prot == "":
-    output_i.write(log_title + "logfile " + project_name + "_" + str(i) + ".txt" + "\nnucleotide\n" + fragment_list[i] + "//")
+    output_i.write(log_title + "logfile " + project_name + "_" + str(i+1) + ".txt" + "\nnucleotide\n" + fragment_list[i] + "//")
   else:
-    output_i.write(log_title + "logfile " + project_name + "_" + str(i) + ".txt" + "\nprotein\n" + fragment_list[i] + "//")
+    output_i.write(log_title + "logfile " + project_name + "_" + str(i+1) + ".txt" + "\nprotein\n" + fragment_list[i] + "//")
   output_i.close()  
                    
 data_log = open("data_log.txt", "w")
