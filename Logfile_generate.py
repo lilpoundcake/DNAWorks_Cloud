@@ -82,14 +82,14 @@ for i in range(fragment_num):
   bash_script.write("dnaworks " + project_name + "_" + str(i) + ".inp\n")
   
 bash_script.write("python3 Primer_Alg.py\n")
-bash_script("mkdir " + project_name + "\n" )
+bash_script.write("mkdir " + project_name + "\n" )
 
 for i in range(fragment_num):
-  bash_script("cp " + project_name + "_" + str(i) + ".inp\n" + "rm -rf " + project_name + "_" + str(i) + ".inp\n")
+  bash_script.write("cp " + project_name + "_" + str(i) + ".inp\n" + "rm -rf " + project_name + "_" + str(i) + ".inp\n")
 
-bash_script("cp " + project_name + ".txt\n" +  "rm -rf " + project_name + ".txt\n")
-bash_script("cp " + project_name + "_hairpin.txt\n" +  "rm -rf " + project_name + "_hairpin.txt\n")
-bash_script("cp " + project_name + "_high_temp.txt\n" +  "rm -rf " + project_name + '_high_temp.txt\n')
+bash_script.write("cp " + project_name + ".txt\n" +  "rm -rf " + project_name + ".txt\n")
+bash_script.write("cp " + project_name + "_hairpin.txt\n" +  "rm -rf " + project_name + "_hairpin.txt\n")
+bash_script.write("cp " + project_name + "_high_temp.txt\n" +  "rm -rf " + project_name + '_high_temp.txt\n')
 
 bash_script.close()
 
