@@ -5,19 +5,16 @@
 import primer3
 import pandas as pd
 import numpy as np
-#import matplotlib.pyplot as plt
-#import seaborn as sns
-
-#from pylab import rcParams
-#rcParams['figure.figsize'] = 15, 9
 
 primer_list = [] #записывает все последовательности праймеров
 sequence = ''
 start_primer = 0
 start_seq = 0
-file_name = input('Введите название проекта ')
 
-for n in range(int(input("Из скольких фрагментов будет собираться сиквенс? "))):
+data_log = open("data_log.txt", "r")
+file_name = data_log.readline().split()[1]
+
+for n in range(int(data_log.readline().split()[1])):
     primers = open(file_name + '_' + str(n+1) +'.txt', 'r')
     for i in primers:
         if 'oligonucleotides need to be synthesized' in i:
@@ -63,7 +60,7 @@ for i in primers_files:
     
 df1 = pd.DataFrame(index=primers.keys(), columns=('Seq', 'Tm', 'Hairpin')) #для анализа гомодимеров
 df1.index.name = 'Name'
-react_temp = int(input('Какова температура реакции? '))
+react_temp = int(data_log.readline().split()[1])
 
 for i in df1.index:
     df1.loc[i, 'Seq'] = primers[i].upper()
@@ -134,5 +131,13 @@ for i in GC_content.index:
 #df2.to_excel(project_name + '_heterodimers.xls')
 #df3.to_excel(project_name + '_high_temp.xls')
 print('Hairpins \n', df1[df1.Hairpin > react_temp].loc[:, ['Hairpin', 'Seq']], '\n', df3)
+
+high_hairpin = open((project_name + "_hairpin.txt"), "w")
+high_hairpin.write(df1[df1.Hairpin > react_temp].loc[:, ['Hairpin', 'Seq']])
+high_hairpin.close()
+
+high_temp = open((project_name + '_high_temp.xls'), "w")
+high_temp.write(df3)
+high_temp.close()
 
 primers_files.close()
