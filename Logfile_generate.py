@@ -70,7 +70,7 @@ elif seq_len < 166 and seq_nt == "":
 
 print(fragment_list)
   
-for i in len(fragment_list):
+for i in range(len(fragment_list)):
   output_i = open(project_name + "_" + str(i+1) + ".txt", "w")
   if seq_prot == "":
     output_i.write(log_title + "\nnucleotide\n" + i + "//")
