@@ -66,13 +66,16 @@ else:
   fragment_num = 1
   fragment_list.append(seq_prot)
                    
-for i in fragment_list:
-  output_i = open(project_name + "_" + i + ".txt", "w")
-  output_i.write(log_title + "\nnucleotide\n" + i + "//")
+for i in len(fragment_list):
+  output_i = open(project_name + "_" + str(i+1) + ".txt", "w")
+  if seq_prot == "":
+    output_i.write(log_title + "\nnucleotide\n" + i + "//")
+  else:
+    output_i.write(log_title + "\nprotein\n" + i + "//")
   output_i.close()  
                    
 data_log = open("data_log.txt", "w")
-data_log.write("project_name " + project_name + "\nfragment_num" + str(fragment_num) + "\nreact_temp " + str(react_temp))
+data_log.write("project_name " + project_name + "\nfragment_num " + str(fragment_num) + "\nreact_temp " + str(react_temp))
 data_log.close()
 
 bash_script = open("bash_next.sh", "w")
