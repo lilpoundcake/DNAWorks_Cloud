@@ -42,7 +42,9 @@ if seq_prot == "":
   seq_len = len(seq_nt)
 else:
   seq_len = len(seq_prot)                 
-                   
+
+print("seq_len ", seq_len, "\n", "seq_nt ", seq_nt, "\n", "seq_prot", seq_prot, "\n") 
+  
 if seq_len >= 500 and seq_prot == "":
   fragment_num = round(len(seq_nt)/350)
   fragment_len = round(seq_len/fragment_num)
@@ -84,13 +86,13 @@ bash_script = open("bash_next.sh", "w")
 bash_script.write("#!/bin/bash\n")
 
 for i in range(fragment_num):
-  bash_script.write("dnaworks " + project_name + "_" + str(i) + ".inp\n")
+  bash_script.write("dnaworks " + project_name + "_" + str(i+1) + ".inp\n")
   
 bash_script.write("python3 Primer_Alg.py\n")
 bash_script.write("mkdir " + project_name + "\n" )
 
 for i in range(fragment_num):
-  bash_script.write("cp " + project_name + "_" + str(i) + ".inp\n" + "rm -rf " + project_name + "_" + str(i) + ".inp\n")
+  bash_script.write("cp " + project_name + "_" + str(i+1) + ".inp\n" + "rm -rf " + project_name + "_" + str(i+1) + ".inp\n")
 
 bash_script.write("cp " + project_name + ".txt\n" +  "rm -rf " + project_name + ".txt\n")
 bash_script.write("cp " + project_name + "_hairpin.txt\n" +  "rm -rf " + project_name + "_hairpin.txt\n")
