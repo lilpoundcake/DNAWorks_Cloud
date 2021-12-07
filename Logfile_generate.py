@@ -12,6 +12,8 @@ log_title += ("melting low " + react_temp + "\n")
 primer_lenght = input("Введите желаемую длину праймеров\n")
 log_title += ("length low " + primer_lenght + "\n")
 
+log_title += ("tbio" + "\n")
+
 codon_freq = input("Введите пороговое значение частоты встречаемости кодонов\n")
 log_title += ("frequency threshold " + codon_freq + "\n")
                    
@@ -76,7 +78,7 @@ print(fragment_list)
 for i in range(len(fragment_list)):
   output_i = open(project_name + "_" + str(i+1) + ".inp", "w")
   if seq_prot == "":
-    output_i.write(log_title + "logfile " + project_name + "_" + str(i+1) + ".txt" + "\nnucleotide\n" + fragment_list[i] + "//")
+    output_i.write(log_title + "logfile " + project_name + "_" + str(i+1) + ".txt" + "\nnucleotide gapfix\n" + fragment_list[i] + "\n" + "//")
   else:
     output_i.write(log_title + "logfile " + project_name + "_" + str(i+1) + ".txt" + "\nprotein\n" + fragment_list[i] + "//")
   output_i.close()  
